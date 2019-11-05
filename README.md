@@ -1,1 +1,2 @@
-Playing around with Streams and Strings - the sort of things that come up during practical tasks in developer interviews. 
+Playing around with Streams, Strings and implementing data structures from fundamentals, the 
+sorts of things that come up during practical tasks in developer interviews. 

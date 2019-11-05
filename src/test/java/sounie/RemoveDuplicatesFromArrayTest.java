@@ -13,7 +13,7 @@ class RemoveDuplicatesFromArrayTest {
 
         String[] result = duplicatesRemover.removeDuplicates(foo);
 
-        assertEquals(result.length, 1);
+        assertEquals(1, result.length);
         assertArrayEquals(foo, result);
     }
 

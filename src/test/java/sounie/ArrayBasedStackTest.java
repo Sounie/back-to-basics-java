@@ -4,10 +4,10 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-class ArrayBasedStackTest {
+public class ArrayBasedStackTest {
     @Test
     public void shouldPushWhenCapacityAvailable() {
-        ArrayBasedStack stack = new ArrayBasedStack(String.class, 1);
+        ArrayBasedStack<String> stack = new ArrayBasedStack(String.class, 1);
         stack.push("Hello world");
 
         assertNotNull(stack, "Expected stack to exist");
@@ -15,7 +15,7 @@ class ArrayBasedStackTest {
 
     @Test
     public void shouldBarfWhenPushAttemptBeyondCapacity() {
-        ArrayBasedStack stack = new ArrayBasedStack(String.class, 1);
+        ArrayBasedStack<String> stack = new ArrayBasedStack(String.class, 1);
 
         stack.push("Hello");
 
@@ -39,6 +39,6 @@ class ArrayBasedStackTest {
 
         Exception exception = assertThrows(IllegalStateException.class, () -> stack.pop());
 
-        assertEquals(exception.getMessage(), "Stack empty");
+        assertEquals("Stack empty", exception.getMessage());
     }
 }
