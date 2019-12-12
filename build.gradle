@@ -15,9 +15,9 @@ repositories {
 dependencies {
     testCompile("org.junit.jupiter:junit-jupiter-engine:5.5.2")
 
-    testRuntimeOnly("org.junit.platform:junit-platform-launcher:1.5.2")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.5.2")
-    testRuntimeOnly("org.junit.vintage:junit-vintage-engine:5.5.2")
+    testCompile("org.junit.platform:junit-platform-launcher:1.5.2")
+    testCompile("org.junit.jupiter:junit-jupiter-engine:5.5.2")
+    testCompile("org.junit.vintage:junit-vintage-engine:5.5.2")
 }
 
 //tasks.withType(JavaCompile) {
