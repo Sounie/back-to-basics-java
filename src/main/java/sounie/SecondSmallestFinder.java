@@ -1,13 +1,10 @@
 package sounie;
 
-import java.lang.reflect.Array;
-
 /**
  * Exercise to find the second smallest value in an array.
  */
 public class SecondSmallestFinder<T extends Comparable<T>> {
     private T[] items;
-    private int top = -1;
 
     public SecondSmallestFinder(T[] items) {
         this.items = items;
