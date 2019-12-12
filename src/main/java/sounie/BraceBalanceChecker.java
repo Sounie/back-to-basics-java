@@ -1,19 +1,20 @@
 package sounie;
 
+import java.util.ArrayDeque;
+import java.util.Deque;
 import java.util.Map;
-import java.util.Stack;
 
 /**
  * Validate that opening and closing brackets of different kinds are symmetrical.
  * Cannot have non-matching closing when other type of bracket is open.
  */
 public class BraceBalanceChecker {
-    private final Stack<Character> openBrackets;
+    private final Deque<Character> openBrackets;
     private final Map<Character, Character> bracketCharacters = Map.of('{', '}', '[', ']', '(', ')');
     private final Map<Character, Character> reverseMatch = Map.of('}', '{', ']', '[', ')', '(');
 
     BraceBalanceChecker() {
-        openBrackets = new Stack<>();
+        openBrackets = new ArrayDeque<>();
     }
 
     boolean isBalanced(String input) {
